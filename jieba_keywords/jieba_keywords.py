@@ -20,7 +20,7 @@ class JiebaKeywords():
         return jieba.analyse.textrank(text, topK=topk, withWeight=True)
 
 
-    def similarity(self, text, topk=10, method='tfidf'):
+    def keywords(self, text, topk=10, method='tfidf'):
         """
         :param text: 文本内容
         :param topk: 返回关键词数目
@@ -49,8 +49,8 @@ if __name__ == '__main__':
     """
     similarity = JiebaKeywords()
 
-    print(similarity.similarity(text, method='tfidf'))
+    print(similarity.keywords(text, method='tfidf'))
 
-    print(similarity.similarity(text, method='textrank'))
+    print(similarity.keywords(text, method='textrank'))
 
 
